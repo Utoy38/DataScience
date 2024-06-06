@@ -1,5 +1,5 @@
 //
-// ƒŒƒ|[ƒg‰Û‘è1—pƒwƒbƒ_ƒtƒ@ƒCƒ‹
+// ãƒ¬ãƒãƒ¼ãƒˆèª²é¡Œ1ç”¨ãƒ˜ãƒƒãƒ€ãƒ•ã‚¡ã‚¤ãƒ«
 //
 
 #ifndef _R1_SORT_H_
@@ -12,7 +12,7 @@
 clock_t r1_start_time;
 
 //
-// ”z—ñ—pƒf[ƒ^‚ğ¶¬‚·‚éŠÖ”
+// é…åˆ—ç”¨ãƒ‡ãƒ¼ã‚¿ã‚’ç”Ÿæˆã™ã‚‹é–¢æ•°
 //
 int *gen_data(int n, int seed, int mode, float r)
 {
@@ -20,17 +20,17 @@ int *gen_data(int n, int seed, int mode, float r)
   int *data;
 
   srand(seed);
-  data = (int *)malloc(sizeof(int) * n); // ”z—ñ—p‚Ìƒƒ‚ƒŠŠm•Û
+  data = (int *)malloc(sizeof(int) * n); // é…åˆ—ç”¨ã®ãƒ¡ãƒ¢ãƒªç¢ºä¿
 
   switch(mode) {
 
-  case 1: // ‘S‚Ä—”‚ğŠi”[
+  case 1: // å…¨ã¦ä¹±æ•°ã‚’æ ¼ç´
     for (i=0; i<n; i++) {
       data[i] = rand();
     }
     break;
 
-  case 2: // •”•ªƒ\[ƒgÏ‚İƒf[ƒ^‚ğŠi”[
+  case 2: // éƒ¨åˆ†ã‚½ãƒ¼ãƒˆæ¸ˆã¿ãƒ‡ãƒ¼ã‚¿ã‚’æ ¼ç´
     if (r<0 || r>1) {
       printf("error: in gen_data(), 'r' should be set between 0 and 1.\n");
       exit(1);
@@ -43,13 +43,13 @@ int *gen_data(int n, int seed, int mode, float r)
     }
     break;
 
-  case 3: // ‹t‡ƒ\[ƒgÏ‚İƒf[ƒ^‚ğŠi”[
+  case 3: // é€†é †ã‚½ãƒ¼ãƒˆæ¸ˆã¿ãƒ‡ãƒ¼ã‚¿ã‚’æ ¼ç´
     for (i=0; i<n; i++) {
       data[i] = n-i;
     }
     break;
 
-  default: // ‚»‚Ì‘¼
+  default: // ãã®ä»–
     printf("error: in gen_data(), 'mode' should be set between 1 and 3.\n");
     exit(1);
   }
@@ -58,15 +58,15 @@ int *gen_data(int n, int seed, int mode, float r)
 }
 
 //
-// ƒf[ƒ^‚ğíœ‚·‚é
+// ãƒ‡ãƒ¼ã‚¿ã‚’å‰Šé™¤ã™ã‚‹
 //
 void free_data(int *data)
 {
-  free(data); // Šm•Û‚µ‚½ƒƒ‚ƒŠ‚ğ‰ğ•ú‚·‚é
+  free(data); // ç¢ºä¿ã—ãŸãƒ¡ãƒ¢ãƒªã‚’è§£æ”¾ã™ã‚‹
 }
 
 //
-// ƒXƒgƒbƒvƒEƒHƒbƒ`‚ğƒZƒbƒg‚·‚éŠÖ”
+// ã‚¹ãƒˆãƒƒãƒ—ã‚¦ã‚©ãƒƒãƒã‚’ã‚»ãƒƒãƒˆã™ã‚‹é–¢æ•°
 //
 void sw_set()
 {
@@ -74,7 +74,7 @@ void sw_set()
 }
 
 //
-// ƒXƒgƒbƒvƒEƒHƒbƒ`‚ÌŒo‰ßŠÔ‚ğ•Ô‚·ŠÖ”
+// ã‚¹ãƒˆãƒƒãƒ—ã‚¦ã‚©ãƒƒãƒã®çµŒéæ™‚é–“ã‚’è¿”ã™é–¢æ•°
 //
 float sw_get() 
 {
